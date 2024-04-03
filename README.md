@@ -12,7 +12,7 @@ This document provides instructions to set up and run the React Component Librar
 First, clone the repository to your local machine:
 ```bash
 git clone https://github.com/heytania/tania_tania_ui_garden_coding_assignment13
-cd react-component-library
+cd tania_tania_ui_garden_coding_assignment13
 ```
 
 ### Building the Docker Image
