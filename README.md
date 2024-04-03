@@ -11,24 +11,24 @@ This document provides instructions to set up and run the React Component Librar
 ### Cloning the Repository
 First, clone the repository to your local machine:
 ```bash
-git clone https://github.com/heytania/ttania_assignment12
+git clone https://github.com/heytania/tania_tania_ui_garden_coding_assignment13
 cd react-component-library
 ```
 
 ### Building the Docker Image
 To build the Docker image for the application, run the following command in the root directory of the project:
 ```bash
-docker build -t tania_assignment12 .
+docker build -t tania_tania_ui_garden_coding_assignment13 .
 ```
 
 ### Running the Docker Container
 Once the image is built, you can run the container using:
 ```bash
-docker run -p 8083:80 --name ttania_assignment12 -d ttania_assignment12
+docker run -p 8018:6006 tania_tania_ui_garden_coding_assignment13
 ```
 
 ### Accessing the Component Library
-After the container starts, you can access the component library by navigating to [http://localhost:8083](http://localhost:8083)
+After the container starts, you can access the component library by navigating to [http://localhost:8018](http://localhost:8018)
  in your web browser.
 
 ## Components

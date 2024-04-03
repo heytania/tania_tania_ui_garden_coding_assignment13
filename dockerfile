@@ -1,26 +1,15 @@
-# Use an official Node.js runtime as a base image
-FROM node:latest
-
-# Set the working directory in the container
-WORKDIR /tania_ui_garden
-
-# Copy the package.json file and package-lock.json file
-COPY package*.json ./
-
-# Install dependencies
-RUN npm install
-
-# Copy the rest of your component library's source files
-COPY . .
-
-# Build your component library
-RUN npm run rollup
-
-# Build the static Storybook
-RUN npm run build-storybook
-
-# Install a simple http server for serving static content
-RUN npm install -g http-server
-
-# The default command to run when starting the container
-CMD ["http-server", "storybook-static", "-p 8083"]
+# pull official base image
+FROM node:16-alpine
+# set working directory to the specified 'lastName_firstName_site'
+WORKDIR /tania_tania_ui_garden_coding_assignment13
+# add `tania_tania_ui_garden/node_modules/.bin` to $PATH
+ENV PATH /tania_tania_ui_garden_coding_assignment13/node_modules/.bin:$PATH
+# install app dependencies
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm install --silent
+RUN npm install react-scripts@3.4.1 -g --silent
+# add app
+COPY . ./
+# start app
+CMD ["npm", "run", "storybook"]
